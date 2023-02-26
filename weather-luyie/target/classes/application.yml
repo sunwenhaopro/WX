@@ -1,0 +1,11 @@
+#自定义端口号
+server:
+  port: 8082
+
+#redis配置
+redis:
+  host: 127.0.0.1
+  port: 6379
+  password: root
+  timeout: 60000
+  database: 4

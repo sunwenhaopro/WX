@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="oa.wx.Mapper.LoLVideoMapper">
+    <!--namespace根据自己需要创建的的mapper的路径和名称填写-->
+    <update id="UpdateMediaIdByName">
+        update lol_video set MediaId=#{param2} where name=#{param1};
+    </update>
+    <select id="GetMediaIdByName" resultType="java.lang.String">
+        select MediaId from lol_video where name=#{name};
+    </select>
+    <select id="GetVideoUrlByName" resultType="java.lang.String">
+        select url from lol_video;
+    </select>
+    <select id="GetAllName" resultType="java.lang.String">
+        select name from lol_video;
+    </select>
+</mapper>

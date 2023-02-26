@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="oa.wx.Mapper.UserMapper">
+    <update id="UpdateToken" parameterType="java.lang.String">
+        update wx_token set token=#{token} where id=1;
+    </update>
+    <select id="findToken" resultType="java.lang.String">
+        select token from wx_token where id=1;
+    </select>
+    <update id="insertMediaId" parameterType="java.lang.String">
+        update wx_photo set photo_id=#{mediaid} where id=1;
+    </update>
+    <select id="findMediaId" resultType="java.lang.String">
+        select photo_id from wx_photo where id=1;
+    </select>
+</mapper>

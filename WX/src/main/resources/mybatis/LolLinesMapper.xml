@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="oa.wx.Mapper.LolLinesMapper">
+    <!--namespace根据自己需要创建的的mapper的路径和名称填写-->
+    <select id="getAllLines" resultType="java.lang.Integer">
+        select MAX(id) from lol_lines;
+    </select>
+    <select id="getRandomLine" resultType="java.lang.String">
+        select lol_line from lol_lines where id=#{id};
+    </select>
+    <insert id="insertLolLine" parameterType="java.lang.String">
+        insert into lol_lines (lol_line) values (#{line});
+    </insert>
+</mapper>
